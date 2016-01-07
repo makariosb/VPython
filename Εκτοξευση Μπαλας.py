@@ -1,7 +1,9 @@
 from visual import *
+from visual.graph import *
 scene1 = display(title='Ripsh Mpalas',
      x=0, y=0, width=800, height=600,
      center=(0,3,0), background=color.black)
+##funct=gcurve(color=color.orange)
 
 #ANTIKEIMENA
 edafos=box(pos=(0,0,0), length=100, height=0, width=6)
@@ -19,7 +21,7 @@ Ms=0.39
 t=0
 dt=0.01
 I=vector(1,0,0)
-ball.v=vector(10,0,0)
+ball.v=vector(20,0,0)
 
 while True:
     rate(100)
@@ -29,5 +31,7 @@ while True:
     ball.v=ball.v+dv
     dx=ball.v*dt
     ball.pos=ball.pos+dx
+##    funct.plot(pos=(t,ball.v.x))
+    t+=1
     if ball.v.x<=0:
         break
