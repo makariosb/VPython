@@ -7,7 +7,7 @@ funct=gcurve(color=color.orange)
 
 #ANTIKEIMENA
 edafos=box(pos=(0,0,0), length=20, height=0, width=6)
-ball=sphere(pos=(0,1,0), radius=1, color=color.red, make_trail=true)
+ball=sphere(pos=(0,1,0), radius=1, color=color.red, make_trail=False)
 elatirio=helix(pos=(-10,1,0), axis=(ball.y,0,0),coils=10, radius=1, length=10,color=color.yellow)
 kouti=box(pos=(-11,1,0), size=(2,2,6), color=color.blue)
 #STATHERES
@@ -25,8 +25,8 @@ while True:
     ball.v.x=ball.v.x+dv
     dx=ball.v.x*dt
     ball.x=ball.x+dx
-#    funct.plot(pos=(t,ball.v.x))
+    funct.plot(pos=(t,ball.v.x))
     elatirio.length=10+ball.x
-    t+=1
-    
+    t+=dt
+
 #Makarios Christakis 2015-2016
