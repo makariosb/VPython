@@ -28,5 +28,3 @@ while 1:
     elatirio.length=A+5+ball.x
     funct.plot(pos=(t,ball.x))
     t+=dt
-#Makarios Christakis 
-#P.S.: Sgarbas=God**2
